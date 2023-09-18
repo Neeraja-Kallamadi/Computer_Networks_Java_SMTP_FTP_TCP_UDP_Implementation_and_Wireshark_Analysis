@@ -1,0 +1,46 @@
+SMTP
+o	SMTP stands for Simple Mail Transfer Protocol.
+o	SMTP is a set of communication guidelines that allow software to transmit an electronic mail over the internet is called Simple Mail Transfer Protocol.
+o	It is a program used for sending messages to other computer users based on e-mail addresses.
+o	It provides a mail exchange between users on the same or different computers, and it also supports:
+o	It can send a single message to one or more recipients.
+o	Sending message can include text, voice, video or graphics.
+o	It can also send the messages on networks outside the internet.
+o	The main purpose of SMTP is used to set up communication rules between servers. The servers have a way of identifying themselves and announcing what kind of communication they are trying to perform. They also have a way of handling the errors such as incorrect email address. For example, if the recipient address is wrong, then receiving server reply with an error message of some kind.
+SMTP Protocol 
+The SMTP model is of two types:
+1.	End-to-end method
+2.	Store-and- forward method
+The end-to-end model is used to communicate between different organizations whereas the store and forward method is used within an organization. An SMTP client who wants to send the mail will contact the destination’s host SMTP directly, in order to send the mail to the destination. The SMTP server will keep the mail to itself until it is successfully copied to the receiver’s SMTP. 
+The client SMTP is the one that initiates the session so let us call it client- SMTP and the server SMTP is the one that responds to the session request so let us call it receiver-SMTP. The client- SMTP will start the session and the receiver-SMTP will respond to the request. 
+Model of SMTP system 
+In the SMTP model user deals with the user agent (UA), for example, Microsoft Outlook, Netscape, Mozilla, etc. In order to exchange the mail using TCP, MTA is used. The user sending the mail doesn’t have to deal with MTA as it is the responsibility of the system admin to set up a local MTA. The MTA maintains a small queue of mails so that it can schedule repeat delivery of mails in case the receiver is not available. The MTA delivers the mail to the mailboxes and the information can later be downloaded by the user agents.
+ 
+Both the SMTP-client and SMTP-server should have 2 components:
+1.	User-agent (UA)
+2.	Local MTA
+Communication between sender and the receiver : 
+The sender’s user agent prepares the message and sends it to the MTA. The MTA’s responsibility is to transfer the mail across the network to the receiver’s MTA. To send mails, a system must have a client MTA, and to receive mails, a system must have a server MTA. 
+SENDING EMAIL: 
+Mail is sent by a series of request and response messages between the client and the server. The message which is sent across consists of a header and a body. A null line is used to terminate the mail header and everything after the null line is considered as the body of the message, which is a sequence of ASCII characters. The message body contains the actual information read by the receipt. 
+RECEIVING EMAIL: 
+The user agent at the server-side checks the mailboxes at a particular time of intervals. If any information is received, it informs the user about the mail. When the user tries to read the mail it displays a list of emails with a short description of each mail in the mailbox. By selecting any of the mail users can view its contents on the terminal.
+Some SMTP Commands: 
+•	HELO – Identifies the client to the server, fully qualified domain name, only sent once per session
+•	MAIL – Initiate a message transfer, fully qualified domain of originator
+•	RCPT – Follows MAIL, identifies an addressee, typically the fully qualified name of the addressee, and for multiple addressees use one RCPT for each addressee
+•	DATA – send data line by line
+Advantages of SMTP:
+•	If necessary, the users can have a dedicated server.
+•	It allows for bulk mailing.
+•	Low cost and wide coverage area.
+•	Offer choices for email tracking.
+•	reliable and prompt email delivery.
+Disadvantages of SMTP:
+•	SMTP’s common port can be blocked by several firewalls.
+•	SMTP security is a bigger problem.
+•	Its simplicity restricts how useful it can be.
+•	Just 7 bit ASCII characters can be used.
+•	If a message is longer than a certain length, SMTP servers may reject the entire message.
+•	Delivering your message will typically involve additional back-and-forth processing between servers, which will delay sending and raise the likelihood that it won’t be sent.
+
